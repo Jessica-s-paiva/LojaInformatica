@@ -1,0 +1,17 @@
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.forms > fieldset{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+}

@@ -14,9 +14,10 @@ const Administrador = () => {
   }, [])
   return (
     <section >
+        <h2>Administrador</h2>
         {
           !!produtos && produtos.map((product, index)=>{
-            return (<Lista nome={product.nome_abreviado} preco={product.preco} categoria={product.categoria} key={index}/>)
+            return (<Lista nome={product.name} cor={product.cor} marca={product.marca} peso={product.peso} tamanho={product.tamanho} valor={product.valor} descricao={product.descricao} imagem={product.imagem}   key={index}/>)
           })
         }
         

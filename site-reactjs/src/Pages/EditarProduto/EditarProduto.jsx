@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { useParams } from 'react-router-dom'
+import Form from '../../Components/Form/Form'
+import S from './EditarProduto.module.css'
 
 const EditarProduto = () => {
   return (
-    <div>EditarProduto</div>
+    <div className={S.container}>
+      <Form />
+    </div>
   )
 }
 
