@@ -23,8 +23,8 @@ const Produtos = () => {
     setProducts(response);
 }
   async function handleGetProductsById() {
-    const response = await getProdutosById(params.id);
-    setProducts(response);
+    const response = await getProdutosById(valorInput);
+    setProducts([response]);
   }
   
   function handleSetInput(target) {
