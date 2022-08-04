@@ -1,0 +1,33 @@
+.container{
+    background-color: var(--secundaria);
+    color: var(--branco);
+    border-radius: 5px;
+    border: 1px solid var(--preto);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5px;
+    /* align-items: flex-start; */
+}
+
+.lista > p{
+    padding: 5px;
+    margin: 10px 0;
+    background-color: var(--cinza);
+    width: 350px;
+    height: 28px;
+}
+
+.lista > .editar{
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--cinza);
+    padding: 5px;
+}
