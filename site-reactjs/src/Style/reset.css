@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    width: 100%;
+    min-height: 100vh;
+    --primaria: #58b04e;
+    --secundaria: #141e5e;
+    --preto: #101010;
+    --cinza: #333;
+    --branco: #f2f2f2;
+    --azul: #2b3f6d;
+    --azulClaro: #6e88c5;
+    --laranja: #bb7447;
+    font-family: 'Montserrat', sans-serif;  
+}
