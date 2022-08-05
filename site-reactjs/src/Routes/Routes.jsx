@@ -5,6 +5,7 @@ import Produtos from '../Pages/Produtos/Produtos';
 import Header from '../Components/Header/Header'
 import Login from '../Pages/Login/Login';
 import Administrador from '../Pages/Administrador/Administrador';
+import EditarProduto from '../Pages/EditarProduto/EditarProduto'
 
 const Routes = () => {
   return (
@@ -13,7 +14,7 @@ const Routes = () => {
       <Switch>
           <Route path='/' element={<Home />}/>
           <Route path='/administrador/' element={<Administrador />}/>
-          <Route path='/editarProduto' element={<Produtos />}/>
+          <Route path='/editarProduto' element={<EditarProduto />}/>
           <Route path='/produtos' element={<Produtos />}/>
           <Route path='/login' element={<Login />}/>
 

@@ -33,7 +33,7 @@ return (
         </div>
         </div>
         <div className={S.lista}>
-            <Link to='/editarProduto' className={S.editar}>Editar</Link>
+            <Link to={`/editarProduto`} className={S.editar}>Editar</Link>
         </div>
     </section>
   )
