@@ -15,3 +15,9 @@ export const getProdutosById = async (valorInput) => {
     const json = await response.data;
     return json;
 }
+
+export const postProduto = async (produto) => {
+    const response = await instancia.post(`/produtos/:id`, produto);
+    const json = await response.data.msg;
+    return json;
+}
