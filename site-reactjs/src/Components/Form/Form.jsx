@@ -2,19 +2,19 @@ import React, {useEffect, useState} from 'react'
 import { postProduto } from '../../Service/api';
 import Botao from '../Botao/Botao';
 import S from './Form.module.css'
+import { useParams } from 'react-router-dom'
 
 const Form = () => {
+  const params = useParams()
   const [dadosForm, setDadosForm] = useState({
-    nome_completo: '',
-    url: '',
-    nome_abreviado: '',
-    categoria: '',
-    marca: '',
-    avaliacao: '',
-    cor: '',
-    preco: '',
-    porcentagem_desconto: '',
-    descricao:''
+    name: '',
+    cor: '', 
+    marca: '', 
+    peso: '', 
+    tamanho: '', 
+    valor: '',
+    descricao:'', 
+    imagem:''
   })
 
   function handleChange(target, nomeDaChave){
@@ -24,6 +24,7 @@ const Form = () => {
 
   function handleSave(){
     postProduto(dadosForm)
+    console.log(dadosForm);
   }
   async function handleGetProductsById() {
     const response = await getProdutosById(valorInput);
@@ -32,11 +33,15 @@ const Form = () => {
   return (
     <div>
       <section>
-        <picture>
-          <img src={dadosForm.imagem} alt="" />
+        <picture className={S.imageForm}>
+          <img  src={dadosForm.imagem} alt="" />
         </picture>
       </section>
       <form className={S.forms} action="">
+        <fieldset>
+          <label htmlFor="">Imagem do produto: </label>
+          <input type="text" value={dadosForm.imagem}  onChange={({ target }) => handleChange(target,'imagem')} placeholder={dadosForm.imagem}/>
+        </fieldset>
         <fieldset>
           <label htmlFor="">Nome: </label>
           <input type="text" value={dadosForm.name}  onChange={({ target }) => handleChange(target,'name')} placeholder={dadosForm.name}/>
@@ -66,12 +71,11 @@ const Form = () => {
           <label htmlFor="">Descrição: </label>
           <input type="text" value={dadosForm.descricao}  onChange={({ target }) => handleChange(target,'descricao')}/>
         </fieldset>
-        
-
+        <section>
+          <Botao text="salvar" onclick={handleSave}/>
+        </section>
       </form>
-      <section>
-        <Botao text="salvar" onclick={handleGetProductsById}/>
-      </section>
+      
     </div>
   )
 }
