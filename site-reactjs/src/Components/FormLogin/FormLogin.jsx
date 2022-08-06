@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from 'react'
-
+import Botao from '../Botao/Botao'
+import {Link} from 'react-router-dom'
 
 const FormLogin = () => {
 
@@ -49,16 +50,19 @@ const FormLogin = () => {
           <input type="checkbox"/>
         </fieldset>
 
-        <button onClick={(event)=>{
+          <div  onClick={(event)=>{
           event.preventDefault()
           handleValidaEmail()
           handleValidaSenha()
-          }}>Logar</button>
+          }}>
+            <Botao
+            text="Logar"/>
+          </div>
         </form>
 
         <section>
             <p>Ainda não tem conta?</p>
-            <button>Cadastre-se</button>
+            <Link to='/cadastro'>Cadastre-se</Link>
         </section>
     </div>
 
