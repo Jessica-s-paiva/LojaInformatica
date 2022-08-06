@@ -15,7 +15,7 @@ const FormLogin = () => {
     setSenha(target.value)
   }
 
-  function validaEmail(){
+  function handleValidaEmail(){
     if(Email.indexOf('@') > 3 && Email.indexOf('.com') > Email.indexOf('@')){
       alert("Email Válido")
     }else{
@@ -23,6 +23,14 @@ const FormLogin = () => {
     }
   }
 
+  function handleValidaSenha(){
+    if(Senha == "123"){
+        alert("Senha Válida")
+      }else{
+        alert("Senha Inválida")
+      }
+  }
+  
   return (
     <div>
         <form>
@@ -33,7 +41,7 @@ const FormLogin = () => {
 
         <fieldset>
           <label htmlFor="">Senha:</label>
-          <input type="password"/>
+          <input type="password" onChange={({target})=>handleInputSenha(target)} />
         </fieldset>
 
         <fieldset>
@@ -43,7 +51,8 @@ const FormLogin = () => {
 
         <button onClick={(event)=>{
           event.preventDefault()
-          validaEmail()
+          handleValidaEmail()
+          handleValidaSenha()
           }}>Logar</button>
         </form>
 
