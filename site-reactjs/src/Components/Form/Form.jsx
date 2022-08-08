@@ -20,11 +20,13 @@ const Form = () => {
   function handleChange(target, nomeDaChave){
     const value = target.value;
     setDadosForm({...dadosForm, [nomeDaChave]: value})
+    console.log(dadosForm);
   }
 
-  function handleSave(){
+  function handleSave(e){
+    e.preventDefault();
     postProduto(dadosForm)
-    console.log(dadosForm);
+    console.log(oi);
   }
   async function handleGetProductsById() {
     const response = await getProdutosById(valorInput);
