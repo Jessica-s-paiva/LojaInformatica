@@ -1,30 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
-import Form from '../../Components/Form/Form'
-import S from './EditarProduto.module.css'
-import { getProdutos } from '../../Service/api.js'
 
 const EditarProduto = () => {
-  const [produtos, setProdutos] = useState('');
-  
-  async function handleRequisicao(){
-    const response = await getProdutos();
-    setProdutos(response);
-  }
-
-  // async function handleGetProductsById() {
-  //   const response = await getProdutosById(valorInput);
-  //   setProdutos([response]);
-  // }
-  useEffect(()=>{
-    // handleGetProductsById();
-    handleRequisicao();
-  }, [])
+  const {id} = useParams();
   return (
-
-    <div className={S.container}>
-      <Form />
-    </div>
+    <div>{id}</div>
   )
 }
 

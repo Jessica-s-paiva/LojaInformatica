@@ -1,11 +1,12 @@
 import React from 'react'
 import {BrowserRouter, Routes as Switch, Route} from 'react-router-dom'
-import Home from '../Pages/Home/Home'
+import Home from '../Pages/Home/Home';
 import Produtos from '../Pages/Produtos/Produtos';
 import Header from '../Components/Header/Header'
 import Login from '../Pages/Login/Login';
 import Administrador from '../Pages/Administrador/Administrador';
-import EditarProduto from '../Pages/EditarProduto/EditarProduto'
+import EditarProduto from '../Pages/EditarProduto/EditarProduto';
+import AdicionarProduto from '../Pages/AdicionarProduto/AdicionarProduto';
 
 const Routes = () => {
   return (
@@ -15,9 +16,9 @@ const Routes = () => {
           <Route path='/' element={<Home />}/>
           <Route path='/administrador/' element={<Administrador />}/>
           <Route path='/editarProduto' element={<EditarProduto />}/>
+          <Route path='/adicionar/:id' element={<AdicionarProduto />}/>
           <Route path='/produtos' element={<Produtos />}/>
           <Route path='/login' element={<Login />}/>
-
       </Switch>
     </BrowserRouter>
   )
