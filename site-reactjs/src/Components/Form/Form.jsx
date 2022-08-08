@@ -26,7 +26,6 @@ const Form = () => {
   function handleSave(e){
     e.preventDefault();
     postProduto(dadosForm)
-    console.log(oi);
   }
   async function handleGetProductsById() {
     const response = await getProdutosById(valorInput);
