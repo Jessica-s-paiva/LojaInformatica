@@ -45,9 +45,7 @@ const Form = () => {
         <FieldSet texto='Tamanho:' dadosFormulario={dadosForm.tamanho} onchange={({ target }) => handleChange(target,'tamanho')}/>
         <FieldSet texto='Valor:' dadosFormulario={dadosForm.valor} onchange={({ target }) => handleChange(target,'valor')}/>
         <FieldSet texto='Descrição:' dadosFormulario={dadosForm.descricao}  onchange={({ target }) => handleChange(target,'descricao')}/>
-        <section>
-          <Botao text="salvar" onclick={handleSave}/>
-        </section>
+        
       </form>
       
     </>

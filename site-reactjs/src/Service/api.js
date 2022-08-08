@@ -16,8 +16,10 @@ export const getProdutosById = async (valorInput) => {
     return json;
 }
 
-export const putProduto = async (id) => {
+export const updateProduto = async (id) => {
     const response = await instancia.put(`/produtos/${id}`);
+    const json = await response.data.msg;
+    return json;
 }
 
 export const postProduto = async (produto) => {
