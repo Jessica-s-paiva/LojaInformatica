@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { postProduto } from '../../Service/api';
+import { postProduto } from '../../Service/api.js';
 import Botao from '../Botao/Botao';
 import S from './Form.module.css';
 import { useParams } from 'react-router-dom';
