@@ -14,7 +14,7 @@ const Item = ({produto}) => {
           <small >Valor: {produto.valor}</small>
           <small >Id: {produto._id}</small>
         <section className={S.edit}>
-        <Link to={`/adicionar/${produto._id}`}>editar</Link>
+        <Link to={`/editar/${produto._id}`}>editar</Link>
         {/* <Navigate to="/editarProduto" replace={true} />       */}
         </section>
       </section> 

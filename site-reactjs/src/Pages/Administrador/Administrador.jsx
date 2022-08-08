@@ -38,7 +38,7 @@ const Administrador = () => {
             value={valorInput}
             onChange={({ target }) => handleSetInput(target)}/>
           <button onClick={handleGetProductsById}>Buscar produto por ID</button>
-          <Link to={`/editarProduto`}><button >Adicionar produto</button> </Link>
+          <Link to={`/adicionarProduto`}><button >Adicionar produto</button> </Link>
         </section>
         <section>
           {
