@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { postProduto } from '../../Service/api';
+import { postProduto } from '../../Service/api.js';
 import Botao from '../Botao/Botao';
 import S from './Form.module.css';
 import { useParams } from 'react-router-dom';
@@ -20,6 +20,7 @@ const Form = () => {
   function handleSave(e){
     e.preventDefault();
     postProduto(dadosForm);
+    console.log(dadosForm);
   }
 
   function handleChange(target, nomeDaChave){
@@ -29,7 +30,7 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <>
       <section>
         <picture className={S.imageForm}>
           <img  src={dadosForm.imagem} alt="" />
@@ -37,7 +38,7 @@ const Form = () => {
       </section>
       <form className={S.forms} action="">
         <FieldSet texto='Imagem do produto:' dadosFormulario={dadosForm.imagem} onchange={({ target }) => handleChange(target,'imagem')}/>
-        <FieldSet texto='Nome:' dadosFormulario={dadosForm.nome} onchange={({ target }) => handleChange(target,'nome')}/>
+        <FieldSet texto='Nome:' dadosFormulario={dadosForm.name} onchange={({ target }) => handleChange(target,'name')}/>
         <FieldSet texto='Cor:' dadosFormulario={dadosForm.cor} onchange={({ target }) => handleChange(target,'cor')}/>
         <FieldSet texto='Marca:' dadosFormulario={dadosForm.marca} onchange={({ target }) => handleChange(target,'marca')}/>
         <FieldSet texto='Peso:' dadosFormulario={dadosForm.peso} onchange={({ target }) => handleChange(target,'peso')}/>
@@ -49,7 +50,7 @@ const Form = () => {
         </section>
       </form>
       
-    </div>
+    </>
   )
 }
 
