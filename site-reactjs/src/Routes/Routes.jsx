@@ -6,6 +6,7 @@ import Header from '../Components/Header/Header'
 import Login from '../Pages/Login/Login';
 import Administrador from '../Pages/Administrador/Administrador';
 import EditarProduto from '../Pages/EditarProduto/EditarProduto'
+import Cadastro from '../Pages/Cadastro/Cadastro'
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
           <Route path='/editarProduto' element={<EditarProduto />}/>
           <Route path='/produtos' element={<Produtos />}/>
           <Route path='/login' element={<Login />}/>
+          <Route path='/cadastro' element={<Cadastro />}/>
 
       </Switch>
     </BrowserRouter>
