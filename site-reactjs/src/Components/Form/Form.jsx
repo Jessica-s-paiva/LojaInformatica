@@ -19,11 +19,7 @@ const Form = () => {
   })
   function handleSave(e){
     e.preventDefault();
-    postProduto(dadosForm)
-  }
-  async function handleGetProductsById() {
-    const response = await getProdutosById(valorInput);
-    setProducts([response]);
+    postProduto(dadosForm);
   }
 
   function handleChange(target, nomeDaChave){
