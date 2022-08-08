@@ -16,8 +16,15 @@ export const getProdutosById = async (valorInput) => {
     return json;
 }
 
+// export const getNome = async (nomeProduto) => {
+//     const response = await instancia.get(`/produtos/${nomeProduto}`);
+//     const json = await response.data;
+//     return json;
+// }
+
 export const postProduto = async (produto) => {
     const response = await instancia.post(`/produtos/:id`, produto);
     const json = await response.data.msg;
     return json;
 }
+

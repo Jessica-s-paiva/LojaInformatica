@@ -1,20 +1,23 @@
 .container{
-    width: 100px;
-    height: 200px;
+    width: 250px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    border: 1px solid black;
 }
-.contentFoto {
+.container > .contentFoto {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
     height: 150px;
-    border: 1px solid black;
-    /* background-image: url(https://www.tynker.com/projects/screenshot/57da4d8ba924051b458b4567/pokemon-battles-alpha.png);
-    background-size: cover; */
     padding: 10px;
+  }
+
+  .foto{
+    width: 150px;
+    height: 150px;
   }
