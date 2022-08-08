@@ -1,6 +1,6 @@
 import React from 'react'
 import S from './Home.module.css'
-import promocao from '/Users/Ebanx/Desktop/loja-mod5/LojaInformatica/site-reactjs/src/assets/promocao30.png'
+import promocao from '/Users/Ebanx/Desktop/loja-mod5/LojaInformatica/site-reactjs/src/assets/sale.png'
 
 const Home = () => {
   return (
