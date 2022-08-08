@@ -1,13 +1,7 @@
 import React,{ useState, useEffect } from 'react';
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 import S from './Item.module.css'
 const Item = ({produto}) => {
-
-  async function handleGetProductsById() {
-    const response = await getProdutosById(valorInput);
-    setProducts([response]);
-    console.log(response._id);
-  }
   
   return (
     <section className={S.container}>
@@ -20,7 +14,8 @@ const Item = ({produto}) => {
           <small >Valor: {produto.valor}</small>
           <small >Id: {produto._id}</small>
         <section className={S.edit}>
-        <Link to={`/editarProduto`}><button >Editar</button> </Link>      
+        
+        {/* <Navigate to="/editarProduto" replace={true} />       */}
         </section>
       </section> 
     </section>
