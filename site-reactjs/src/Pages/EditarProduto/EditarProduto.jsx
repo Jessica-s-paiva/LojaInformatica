@@ -9,7 +9,7 @@ const EditarProduto = () => {
   const [produtos, setProdutos] = useState('');
   
   async function handleRequisicao(){
-    const response = await getProdutos();git 
+    const response = await getProdutos();
     setProdutos(response);
   }
 

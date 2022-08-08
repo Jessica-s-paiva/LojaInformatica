@@ -49,4 +49,3 @@ export const getIndicacoes = async ()=>{
     }
     return indicacoes;
 }
-
