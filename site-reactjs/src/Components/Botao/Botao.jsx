@@ -3,7 +3,7 @@ import S from './Botao.module.css';
 
 const Botao = ({text}) => {
   return (
-    <button type='text' className={S.btn}>{text}</button>
+    <button type='submit' className={S.btn}>{text}</button>
   )
 }
 
