@@ -1,8 +1,11 @@
 import React from 'react'
+import Indicacao from '../../Components/Indicacao/Indicacao'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <Indicacao/>
+    </>
   )
 }
 

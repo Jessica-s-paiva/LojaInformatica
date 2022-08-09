@@ -1,0 +1,30 @@
+.FullScreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    background-color: lightblue;
+    top: 0;
+    animation-delay: 1s;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    
+    display: grid;
+    place-items:  center;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1; visibility: visible;}
+    100% {opacity: 0; visibility: hidden;}
+ } 
+
+ .Logo {
+    width: 25%;
+ }
+
+ .Loading {
+    width: 4%;
+ }
