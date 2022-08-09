@@ -5,6 +5,7 @@ import Produtos from '../Pages/Produtos/Produtos';
 import Header from '../Components/Header/Header';
 import Login from '../Pages/Login/Login';
 import Administrador from '../Pages/Administrador/Administrador';
+
 import Footer from '../Components/Footer/Footer';
 import Cadastro from '../Pages/Cadastro/Cadastro';
 import EditarProduto from '../Pages/EditarProduto/EditarProduto';
@@ -17,6 +18,7 @@ const Routes = () => {
       <Switch>
           <Route path='/' element={<Home />}/>
           <Route path='/administrador/' element={<Administrador />}/>
+          <Route path='/editarProduto/:id' element={<EditarProduto />}/>
           <Route path='/adicionarProduto' element={<AdicionarProduto />}/>
           <Route path='/produtos/:id' element={<EditarProduto />}/>
           <Route path='/produtos' element={<Produtos />}/>
