@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import db from "./Config/dbConnect.js";
-import produtos from "./Models/Produto.js";
 import routes from  './Routes/index.js'
 
 db.on("error", console.log.bind(console, 'Erro de conexão'))

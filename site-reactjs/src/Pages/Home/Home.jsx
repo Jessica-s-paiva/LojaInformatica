@@ -3,7 +3,7 @@ import Cards from '../../Components/Cards/Cards';
 import {getProdutos} from '../../Service/api.js';
 import pc from '../../assets/pc.jpg'
 import { useParams } from 'react-router-dom'
-
+import S from './Home.module.css';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -32,6 +32,7 @@ const Home = () => {
           }
         </section>
     </div>
+
 
   )
 }
