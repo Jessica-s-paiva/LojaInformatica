@@ -7,6 +7,7 @@
     align-items: center;
     flex-wrap: wrap;
     border: 1px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .container > .contentFoto {
     display: flex;
@@ -15,6 +16,7 @@
     width: 200px;
     height: 150px;
     padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .foto{
