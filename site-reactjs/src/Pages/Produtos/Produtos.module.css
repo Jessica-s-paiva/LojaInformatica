@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: #DEF1F6;
 }
 
 .sectionB{
@@ -16,6 +17,7 @@
     margin-bottom: 10em;
     padding: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #DEF1F6;
 }
 
 .texto{
@@ -23,6 +25,16 @@
     min-width: 30em;
     min-height: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button{
+    background-color: #2b3f6d;
+    color:#DEF1F6;
+    min-width: 15em;
+    min-height: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    margin-top: 8px;
 }
 
 .sectionCards{
