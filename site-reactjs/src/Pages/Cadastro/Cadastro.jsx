@@ -1,8 +1,8 @@
 
 import React, {useEffect, useState} from 'react'
-import Botao from '../../Components/Botao/Botao'
 import {Link} from 'react-router-dom'
 import S from './Cadastro.module.css'
+import logo from '../../assets/preguica.png'
 
 const Cadastro = () => {
 
@@ -29,14 +29,12 @@ const Cadastro = () => {
       alert("Nome não informado")
     }else{
       setVerificacao( 0)
-      alert("Nome Válido")
     }
   }
 
   function handleValidaEmail(){
     if(Email.indexOf('@') > 3 && Email.indexOf('.com') > Email.indexOf('@')){
       setVerificacao(2)
-      alert("Email Válido")
     }else{
       setVerificacao( 0)
       alert("Email Inválido")
@@ -46,7 +44,6 @@ const Cadastro = () => {
   function handleValidaSenha(){
     if(Senha == "123"){
       setVerificacao( 3)
-        alert("Senha Válida")
       }else{
         setVerificacao(0)
         alert("Senha Inválida")
@@ -60,6 +57,10 @@ const Cadastro = () => {
       <div className={S.wrapLogin}>
         <form className={S.loginForm}>
           <span className={S.loginFormTitle}></span>
+
+          <span className={S.loginFormTitle}>
+              <img src={logo} alt="Preguiça" />
+            </span>
 
           <div className={S.wrapInput}>
             <input  className={S.input} type="text" onChange={({target})=>handleInputNome(target)} />

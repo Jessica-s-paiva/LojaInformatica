@@ -3,6 +3,9 @@ import React, {useEffect, useState} from 'react'
 //import Botao from '../Botao/Botao'
 import {Link} from 'react-router-dom'
 import S from './FormLogin.module.css'
+import logo from '../../assets/preguica.png'
+
+
 
 const FormLogin = () => {
 
@@ -21,7 +24,6 @@ const FormLogin = () => {
   function handleValidaEmail(){
     if(Email.indexOf('@') > 3 && Email.indexOf('.com') > Email.indexOf('@')){
       setVerificacao(1)
-      alert("Email Válido")
     }else{
       setVerificacao( 0)
       alert("Email Inválido")
@@ -31,7 +33,6 @@ const FormLogin = () => {
   function handleValidaSenha(){
     if(Senha == "123"){
       setVerificacao( 2)
-        alert("Senha Válida")
       }else{
         setVerificacao(0)
         alert("Senha Inválida")
@@ -40,12 +41,16 @@ const FormLogin = () => {
 
   
   return (
+    <div>
     <div className={S.container}>
     <div className={S.containerLogin}>
       <div className={S.wrapLogin}>
         <form className={S.loginForm}>
           <span className={S.loginFormTitle}></span>
-          
+
+          <span className={S.loginFormTitle}>
+              <img src={logo} alt="preguiça" />
+            </span>
 
           <div className={S.wrapInput}>
             <input  className={S.input} type="email" onChange={({target})=>handleInputEmail(target)} />
@@ -71,12 +76,12 @@ const FormLogin = () => {
           }}>
             <Link className={S.loginFormBtn}  to={Verificacao > 0 ? '/administracao':''}>Logar</Link>
           </div>
-
         </form>
       </div>
     </div>
     </div>
-
+    </div>
+    
   )
 }
 

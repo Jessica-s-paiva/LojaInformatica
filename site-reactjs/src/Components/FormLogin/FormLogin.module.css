@@ -1,5 +1,6 @@
 
   .container {
+    display: grid;
     width: 100%;
     margin: 0 auto;
   }
@@ -179,4 +180,10 @@
     color: #6a7dfe;
     line-height: 1.5;
     text-decoration: none;
+  }
+  .footer{
+    background-color: black;
+    color:white;
+    padding:3em;
+    text-align:center;
   }
