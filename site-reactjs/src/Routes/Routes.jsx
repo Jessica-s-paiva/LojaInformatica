@@ -5,6 +5,7 @@ import Produtos from '../Pages/Produtos/Produtos';
 import Header from '../Components/Header/Header';
 import Login from '../Pages/Login/Login';
 import Administrador from '../Pages/Administrador/Administrador';
+import Footer from '../Components/Footer/Footer';
 import Cadastro from '../Pages/Cadastro/Cadastro';
 import EditarProduto from '../Pages/EditarProduto/EditarProduto';
 import AdicionarProduto from '../Pages/AdicionarProduto/AdicionarProduto';
@@ -21,7 +22,8 @@ const Routes = () => {
           <Route path='/produtos' element={<Produtos />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/cadastro' element={<Cadastro />}/>
-      </Switch>
+      </Switch> 
+      <Footer />  
     </BrowserRouter>
   )
 }
