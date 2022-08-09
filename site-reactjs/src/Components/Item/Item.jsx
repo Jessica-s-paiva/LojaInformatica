@@ -10,21 +10,22 @@ const Item = ({produto}) => {
    deleteProduto(produto._id);
   }
   return (
-    <section className={S.container}>
+    // <section className={S.container}>
       <section className={S.dados}>
-          <small>Nome: {produto.name}</small>
-          <small >Cor: {produto.cor}</small>
-          <small >Marca: {produto.marca}</small> 
-          <small>Peso: {produto.peso}</small>
-          <small >Tamanho: {produto.tamanho}</small>
-          <small >Valor: {produto.valor}</small>
-          <small >Id: {produto._id}</small>
+          <small>{produto.name}</small>
+          <small >{produto.cor}</small>
+          <small >{produto.marca}</small> 
+          <small>{produto.peso}</small>
+          <small >{produto.tamanho}</small>
+          <small >{produto.valor}</small>
+          <small >{produto._id}</small>
         <section className={S.edit}>
-        <Link to={`/produtos/${produto._id}`}>editar</Link>
-        <Botao className={S.btn} text='Excluir' onclick={handleDelete}/>
+        <Link className={S.link} to={`/produtos/${produto._id}`}>Editar</Link>
+        {/* <Botao className={S.btn} text='Excluir' onclick={handleDelete}/> */}
+        <button className={S.btn} onClick={handleDelete}>Excluir</button>
         </section>
       </section> 
-    </section>
+    // </section>
   )
 }
 
