@@ -14,12 +14,54 @@
 .
 ## 📥 Instalação
 
-```bash
-  $ git clone https://github.com/Jessica-s-paiva/Loja-React.git
-  Instale as dependências
-  $ npm install
-  Execute a aplicação
-```
+## 📥 Como rodar a aplicação:
+
+### 1º passo:
+- Clone o Projeto executando o código a seguir no terminal de comando: 
+
+      $ git clone https://github.com/Jessica-s-paiva/Loja-React.git
+
+
+### 2º passo: 
+  
+- É necessário instalar as dependências necessárias para a execução da aplicação.
+- Para isso, abra o projeto no editor de código de sua preferência e inicie o terminal de comando;
+- Em seguida, rode os seguintes comandos:
+
+		npm install
+
+		npm install react-icons
+    
+### 3º passo:
+- Coloque a API para rodar, executando os seguintes comandos no terminal:
+
+		cd .\api\   
+		
+	    npm run start
+
+### 4º passo:
+- Por último, rode a aplicação em React.
+
+Entre no diretório do projeto com o comando:
+
+	`cd .\site-reactjs\`
+
+E então rode o seguinte comando no terminal:
+
+	`npm run dev`
+	
+- Este último comando proverá um local que pode ser acessado no navegador para visualizar a aplicação em funcionamento.
+
+## ✨ Aprendizados durante o projeto
+
+- Introdução ao React
+	- Organização de pastas no projeto;
+	- Criação, utilização (e reutilização) de componentes;
+	- Manipulação de Rotas;
+	- SRP (Single Responsibility Principle).
+- Utilização da ferramenta Vite para construção de front-end;
+- Manipulação/consumo de API através do React;
+
 
 ## 🛠 Ferramentas utilizadas
 VSCode, Insomnia, Discord...
