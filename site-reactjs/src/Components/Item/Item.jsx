@@ -20,9 +20,9 @@ const Item = ({produto}) => {
           <small >{produto.valor}</small>
           <small >{produto._id}</small>
         <section className={S.edit}>
-        <Link className={S.link} to={`/produtos/${produto._id}`}>Editar</Link>
+          <Link className={S.link} to={`/produtos/${produto._id}`}>Editar</Link>
         {/* <Botao className={S.btn} text='Excluir' onclick={handleDelete}/> */}
-        <button className={S.btn} onClick={handleDelete}>Excluir</button>
+         <button className={S.btn} onClick={handleDelete}>Excluir</button>
         </section>
       </section> 
     // </section>

@@ -33,7 +33,7 @@ picture > .logo{
     padding: 10px 40px;
     margin: 10px;
     border: 1px solid var(--branco);
-    border-radius: 5px;
+    border-radius: 70px;
     font-family: 'Montserrat', sans-serif;  
     box-shadow: 1px 2px var(--azul);
 }
@@ -44,7 +44,7 @@ picture > .logo{
     margin: 10px;
     background-color: var(--azul);
     border: 1px solid var(--branco);
-    border-radius: 5px;
+    border-radius: 70px;
     text-decoration: none;
     text-align: center;
     color: white;
@@ -60,7 +60,7 @@ picture > .logo{
     padding: 10px 20px;
     background-color: var(--azul);
     border: 1px solid var(--branco);
-    border-radius: 5px;
+    border-radius: 70px;
     text-decoration: none;
     color: white;
     font-family: 'Montserrat', sans-serif;  
@@ -68,15 +68,12 @@ picture > .logo{
 }
 
 .section{
-    /* background-color: var(--cinza); */
     color: var(--branco);
     border-radius: 5px;
     display: inline-grid;
     width: 1400px;
     grid-template-columns: auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 30px;
     text-align: center;
 }
