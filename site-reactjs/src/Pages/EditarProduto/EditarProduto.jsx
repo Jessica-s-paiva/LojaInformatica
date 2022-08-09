@@ -12,6 +12,22 @@ const EditarProduto = () => {
   const params = useParams()
   const {id} = useParams();
   const [produtos, setProdutos] = useState('');
+  const [dadosForm, setDadosForm] = useState({
+    name: '',
+    cor: '', 
+    marca: '', 
+    peso: '', 
+    tamanho: '', 
+    valor: '',
+    descricao:'', 
+    imagem:''
+  })
+
+function handleChange(target, nomeDaChave){
+    const value = target.value;
+    setDadosForm({...dadosForm, [nomeDaChave]: value})
+    console.log(dadosForm);
+}
   useEffect(()=>{
     // handleGetProductsById();
     handleGetProductsById();
@@ -19,13 +35,13 @@ const EditarProduto = () => {
 
   async function handleGetProductsById() {
     const response = await getProdutosById(id);
-    setProdutos(response);
+    setDadosForm(response);
     console.log(response);
   }
 
   function handleUpdate(e){
     e.preventDefault();
-    updateProduto(id);
+    updateProduto(id, dadosForm);
   }
   return (
     <div>
@@ -38,7 +54,7 @@ const EditarProduto = () => {
         </section> */}
         <section>
           <h3>ID: {id}</h3>
-          <AddProduto produto={produtos}/>
+          <AddProduto dadosForm={dadosForm} handleChange={handleChange}/>
           <Botao text='Alterar' onclick={handleUpdate}/>
         </section>
         
