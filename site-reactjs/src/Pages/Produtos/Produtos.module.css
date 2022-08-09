@@ -6,7 +6,7 @@
     align-items: flex-end;
     padding: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(243, 252, 253);
+    background-color: #6e88c5;
 }
 
 .texto{
@@ -35,7 +35,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(243, 252, 253);
+    background-color: #6e88c5;
 }
 
 .sectionCards{
@@ -46,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    background-color:rgb(243, 252, 253);
+    background-color:#6e88c5;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
