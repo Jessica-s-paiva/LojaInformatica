@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.container > .dados{
+    background-color: var(--secundaria);
+    color: var(--branco);
+    border-radius: 5px;
+    border: 1px solid var(--preto);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.dados > small{
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--cinza);
+    height: 28px;
+}
+
