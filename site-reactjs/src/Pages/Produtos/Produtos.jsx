@@ -13,11 +13,6 @@ const Produtos = () => {
     handleGetProducts();
   }, []);
 
-  // async function handleGetProductsById() {
-  //     const response = await getProdutosById(params.valorInput)
-  //     setProducts([response]);
-   
-  //}
   async function handleGetProducts() {
     const response = await getProdutos();
     setProducts(response);
@@ -25,6 +20,7 @@ const Produtos = () => {
   async function handleGetProductsById() {
     const response = await getProdutosById(valorInput);
     setProducts([response]);
+    console.log(response._id);
   }
   
   function handleSetInput(target) {
