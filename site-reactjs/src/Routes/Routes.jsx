@@ -16,7 +16,7 @@ const Routes = () => {
           <Route path='/' element={<Home />}/>
           <Route path='/administrador/' element={<Administrador />}/>
           <Route path='/adicionarProduto' element={<AdicionarProduto />}/>
-          <Route path='/editar/:id' element={<EditarProduto />}/>
+          <Route path='/produtos/:id' element={<EditarProduto />}/>
           <Route path='/produtos' element={<Produtos />}/>
           <Route path='/login' element={<Login />}/>
       </Switch>

@@ -18,8 +18,10 @@ export const getProdutosById = async (valorInput) => {
 
 export const updateProduto = async (id) => {
     const response = await instancia.put(`/produtos/${id}`);
-    const json = await response.data.msg;
-    return json;
+}
+
+export const deleteProduto = async (id) => {
+    const response = await instancia.delete(`/produtos/${id}`);
 }
 
 export const postProduto = async (produto) => {

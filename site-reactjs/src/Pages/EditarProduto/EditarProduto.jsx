@@ -9,6 +9,7 @@ import Cards from '../../Components/Cards/Cards';
 import AddProduto from '../../Components/AddProduto/AddProduto';
 
 const EditarProduto = () => {
+  const params = useParams()
   const {id} = useParams();
   const [produtos, setProdutos] = useState('');
   useEffect(()=>{
@@ -18,30 +19,26 @@ const EditarProduto = () => {
 
   async function handleGetProductsById() {
     const response = await getProdutosById(id);
-    setProdutos([response]);
+    setProdutos(response);
     console.log(response);
   }
 
   function handleUpdate(e){
     e.preventDefault();
-    updateProduto(dadosForm);
-    console.log(dadosForm);
+    updateProduto(id);
   }
   return (
-    <div>{id}
-        <section>
+    <div>
+        {/* <section>
           {
             !!produtos && produtos.map((product, index)=>{
               return (<Cards produto={product} key={index}/>)
             })
           }
-        </section>
+        </section> */}
         <section>
-          {
-            !!produtos && produtos.map((product, index)=>{
-              return (<AddProduto produto={product} key={index}/>)
-            })
-          }
+          <h3>ID: {id}</h3>
+          <AddProduto produto={produtos}/>
           <Botao text='Alterar' onclick={handleUpdate}/>
         </section>
         
