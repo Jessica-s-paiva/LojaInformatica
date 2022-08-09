@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    color: aquamarine;
 }
 
 .sectionB{
@@ -14,7 +13,16 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 100em;
+    margin-bottom: 10em;
+    padding: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.texto{
+    border-radius: 14em;
+    min-width: 30em;
+    min-height: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .sectionCards{
@@ -24,7 +32,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: black;
+    background-color: #DEF1F6;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

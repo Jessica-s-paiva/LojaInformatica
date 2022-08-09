@@ -43,7 +43,7 @@ const Produtos = () => {
           }
         </section>
         <section className={S.sectionB}>
-          <input type="text" placeholder='Digite o ID do produto'
+          <input className={S.texto} type="text" placeholder='Digite o ID do produto'
             value={valorInput}
             onChange={({ target }) => handleSetInput(target)}/>
           <button onClick={handleGetProductsById}>Buscar produto por ID</button>
