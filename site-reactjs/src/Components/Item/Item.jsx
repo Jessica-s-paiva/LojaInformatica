@@ -21,8 +21,7 @@ const Item = ({produto}) => {
           <small >Id: {produto._id}</small>
         <section className={S.edit}>
         <Link to={`/produtos/${produto._id}`}>editar</Link>
-        <Botao text='Excluir' onclick={handleDelete}/>
-        {/* <Navigate to="/editarProduto" replace={true} />       */}
+        <Botao className={S.btn} text='Excluir' onclick={handleDelete}/>
         </section>
       </section> 
     </section>
