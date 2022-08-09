@@ -1,7 +1,7 @@
-import React from 'react';
-import S from './Cards.module.css';
+import React from "react";
+import S from "./Cards.module.css";
 
-const Cards = ({produto}) => {
+const Cards = ({ produto }) => {
   return (
     <section className={S.container}>
         <picture className={S.contentFoto}>
@@ -20,7 +20,7 @@ const Cards = ({produto}) => {
         
         
     </section>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;
