@@ -1,72 +1,110 @@
-
-import React, {useEffect, useState} from 'react'
-import Botao from '../Botao/Botao'
-import {Link} from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+//import Botao from '../Botao/Botao'
+import { Link } from "react-router-dom";
+import S from "./FormLogin.module.css";
+import logo from "../../assets/preguica.png";
 
 const FormLogin = () => {
+  const [Email, setEmail] = useState("");
+  const [Senha, setSenha] = useState("123");
+  const [Verificacao, setVerificacao] = useState(0);
 
-  const [Email, setEmail] = useState('')
-  const [Senha, setSenha]= useState('123')
-
-  function handleInputEmail(target){
-    setEmail(target.value)
-  }
-  
-  function handleInputSenha(target){
-    setSenha(target.value)
+  function handleInputEmail(target) {
+    setEmail(target.value);
   }
 
-  function handleValidaEmail(){
-    if(Email.indexOf('@') > 3 && Email.indexOf('.com') > Email.indexOf('@')){
-      alert("Email Válido")
-    }else{
-      alert("Email Inválido")
+  function handleInputSenha(target) {
+    setSenha(target.value);
+  }
+
+  function handleValidaEmail() {
+    if (Email.indexOf("@") > 3 && Email.indexOf(".com") > Email.indexOf("@")) {
+      setVerificacao(1);
+    } else {
+      setVerificacao(0);
+      alert("Email Inválido");
     }
   }
 
-  function handleValidaSenha(){
-    if(Senha == "123"){
-        alert("Senha Válida")
-      }else{
-        alert("Senha Inválida")
-      }
+  function handleValidaSenha() {
+    if (Senha == "123") {
+      setVerificacao(2);
+    } else {
+      setVerificacao(0);
+      alert("Senha Inválida");
+    }
   }
-  
+
   return (
     <div>
-        <form>
-        <fieldset>
-          <label htmlFor="" >Email:</label>
-          <input type="email" onChange={({target})=>handleInputEmail(target)}/>
-        </fieldset>
-
-        <fieldset>
-          <label htmlFor="">Senha:</label>
-          <input type="password" onChange={({target})=>handleInputSenha(target)} />
-        </fieldset>
-
-        <fieldset>
-          <label htmlFor="">Manter-me Logado:</label>
-          <input type="checkbox"/>
-        </fieldset>
-
-          <div  onClick={(event)=>{
-          event.preventDefault()
-          handleValidaEmail()
-          handleValidaSenha()
-          }}>
-            <Botao
-            text="Logar"/>
+      <div className={S.container}>
+        <div className={S.containerLogin}>
+          <div className={S.logoContainer}>
+            <span className={S.welcomeBackTitle}>Olá! Seja bem vindo</span>
+            <img src={logo} alt="preguiça" />
           </div>
-        </form>
+        </div>
+        <div className={S.containerLogin}>
+          <div className={S.logoContainer2}>
+            <div className={S.wrapLogin}>
+              <form className={S.loginForm}>
+                <span className={S.loginFormTitle}></span>
 
-        <section>
-            <p>Ainda não tem conta?</p>
-            <Link to='/cadastro'>Cadastre-se</Link>
-        </section>
+                <span className={S.loginFormTitle}></span>
+
+                <div className={S.wrapInput}>
+                  <input
+                    className={S.input}
+                    type="email"
+                    onChange={({ target }) => handleInputEmail(target)}
+                  />
+                  <span
+                    className={S.focusInput}
+                    data-placeholder="Email"
+                  ></span>
+                </div>
+
+                <div className={S.wrapInput}>
+                  <input
+                    className={S.input}
+                    type="password"
+                    onChange={({ target }) => handleInputSenha(target)}
+                  />
+                  <span
+                    className={S.focusInput}
+                    data-placeholder="Senha"
+                  ></span>
+                </div>
+
+                <div className={S.textCenter}>
+                  <span className={S.txt1}>Não possui conta?</span>
+
+                  <Link className={S.txt2} to="/cadastro">
+                    Cadastrar-se
+                  </Link>
+                </div>
+
+                <div
+                  onClick={(event) => {
+                    event.preventDefault();
+                    handleValidaEmail();
+                    handleValidaSenha();
+                  }}
+                >
+                  <Link
+                    className={S.loginFormBtn}
+                    to={Verificacao > 0 ? "/administrador" : ""}
+                  >
+                    Logar
+                  </Link>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default FormLogin
+export default FormLogin;
