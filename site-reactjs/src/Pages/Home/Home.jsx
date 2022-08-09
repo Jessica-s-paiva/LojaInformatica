@@ -1,10 +1,16 @@
-import React from 'react'
-import Indicacao from '../../Components/Indicacao/Indicacao'
+import React from 'react';
+import S from './Home.module.css';
+import Indicacao from '../../Components/Indicacao/Indicacao';
 
 const Home = () => {
   return (
     <>
-    <Indicacao/>
+    <div className={S.entrada}>
+
+    </div>
+    <div className={S.produtos}>
+      <Indicacao/>
+    </div>
     </>
   )
 }
