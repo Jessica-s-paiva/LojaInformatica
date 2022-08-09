@@ -40,7 +40,6 @@ const FormLogin = () => {
       <div className={S.container}>
         <div className={S.containerLogin}>
           <div className={S.logoContainer}>
-            <span className={S.welcomeBackTitle}>Olá! Seja bem vindo</span>
             <img src={logo} alt="preguiça" />
           </div>
         </div>
@@ -48,9 +47,8 @@ const FormLogin = () => {
           <div className={S.logoContainer2}>
             <div className={S.wrapLogin}>
               <form className={S.loginForm}>
-                <span className={S.loginFormTitle}></span>
-
-                <span className={S.loginFormTitle}></span>
+                <span className={S.loginFormTitle}>Logar!</span>
+                <br />
 
                 <div className={S.wrapInput}>
                   <input
