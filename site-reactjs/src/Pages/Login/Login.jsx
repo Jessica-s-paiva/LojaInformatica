@@ -1,11 +1,10 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import FormLogin from '../../Components/FormLogin/FormLogin';
+
 const Login = () => {
   return (
     <div>
-      <div>
-        <Link to='/administrador'>Entrar</Link>
-      </div>
+      <FormLogin />
     </div>
   )
 }

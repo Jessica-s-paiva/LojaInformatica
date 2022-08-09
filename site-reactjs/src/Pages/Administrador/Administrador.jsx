@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Item from '../../Components/Item/Item';
-import Lista from '../../Components/Lista/Lista';
 import {getProdutos} from '../../Service/api.js';
 import { getProdutosById } from '../../Service/api.js';
 import S from './Administrador.module.css';
-import {Link, Navigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Logo from '../../Images/image-animation.png';
 
 const Administrador = () => {

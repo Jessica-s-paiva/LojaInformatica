@@ -28,7 +28,6 @@ const Form = () => {
     setDadosForm({...dadosForm, [nomeDaChave]: value})
     console.log(dadosForm);
   }
-
   return (
     <>
       <section>
