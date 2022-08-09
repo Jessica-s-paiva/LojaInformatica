@@ -1,27 +1,17 @@
-.sectionA{
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #DEF1F6;
-}
-
 .sectionB{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     align-items: flex-end;
-    margin-bottom: 10em;
     padding: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #DEF1F6;
+    background-color: rgb(243, 252, 253);
 }
 
 .texto{
-    border-radius: 14em;
+    margin-top: 5em;
+    border-radius: 10px;
     min-width: 30em;
     min-height: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -30,21 +20,33 @@
 .button{
     background-color: #2b3f6d;
     color:#DEF1F6;
-    min-width: 15em;
+    min-width: 7em;
     min-height: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 10px;
     margin-top: 8px;
+    margin-left: 3px;
+}
+
+.sectionA{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(243, 252, 253);
 }
 
 .sectionCards{
-    padding-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: #DEF1F6;
+    background-color:rgb(243, 252, 253);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
