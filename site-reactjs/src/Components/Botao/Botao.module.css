@@ -11,9 +11,13 @@
 }
 
 .botoes{
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-around; 
     align-items: center;
     width: 100%;
+}
+.btn:hover{
+    cursor:pointer;
+    transition: 0.3s;
 }

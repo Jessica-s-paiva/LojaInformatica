@@ -1,78 +1,54 @@
-import React, {useEffect, useState} from 'react'
-import { postProduto } from '../../Service/api';
+import React, {useEffect, useState} from 'react';
+import { postProduto } from '../../Service/api.js';
 import Botao from '../Botao/Botao';
-import S from './Form.module.css'
+import S from './Form.module.css';
+import { useParams } from 'react-router-dom';
+import FieldSet from '../FieldSet/FieldSet';
 
 const Form = () => {
+  const params = useParams();
   const [dadosForm, setDadosForm] = useState({
-    nome_completo: '',
-    url: '',
-    nome_abreviado: '',
-    categoria: '',
-    marca: '',
-    avaliacao: '',
-    cor: '',
-    preco: '',
-    porcentagem_desconto: '',
-    descricao:''
+    name: '',
+    cor: '', 
+    marca: '', 
+    peso: '', 
+    tamanho: '', 
+    valor: '',
+    descricao:'', 
+    imagem:''
   })
+  function handleSave(e){
+    e.preventDefault();
+    postProduto(dadosForm);
+    console.log(dadosForm);
+  }
 
   function handleChange(target, nomeDaChave){
     const value = target.value;
     setDadosForm({...dadosForm, [nomeDaChave]: value})
-  }
-
-  function handleSave(){
-    postProduto(dadosForm)
-  }
-  async function handleGetProductsById() {
-    const response = await getProdutosById(valorInput);
-    setProducts([response]);
+    console.log(dadosForm);
   }
   return (
-    <div>
+    <>
       <section>
-        <picture>
-          <img src={dadosForm.imagem} alt="" />
+        <picture className={S.imageForm}>
+          <img  src={dadosForm.imagem} alt="" />
         </picture>
       </section>
       <form className={S.forms} action="">
-        <fieldset>
-          <label htmlFor="">Nome: </label>
-          <input type="text" value={dadosForm.name}  onChange={({ target }) => handleChange(target,'name')} placeholder={dadosForm.name}/>
-        </fieldset>
-        <fieldset>
-          <label htmlFor="">Cor: </label>
-          <input type="text" value={dadosForm.cor}  onChange={({ target }) => handleChange(target,'cor')}/>
-        </fieldset>
-        <fieldset>
-        <fieldset>
-          <label htmlFor="">Marca: </label>
-          <input type="text" value={dadosForm.marca}  onChange={({ target }) => handleChange(target,'marca')}/>
-        </fieldset>
-          <label htmlFor="">Peso: </label>
-          <input type="text" value={dadosForm.peso}  onChange={({ target }) => handleChange(target,'peso')}/>
-        </fieldset>
-        
-        <fieldset>
-          <label htmlFor="">Tamanho: </label>
-          <input type="text" value={dadosForm.tamanho}  onChange={({ target }) => handleChange(target,'tamanho')}/>
-        </fieldset>
-        <fieldset>
-          <label htmlFor="">Valor: </label>
-          <input type="text" value={dadosForm.valor}  onChange={({ target }) => handleChange(target,'valor')}/>
-        </fieldset>
-        <fieldset>
-          <label htmlFor="">Descrição: </label>
-          <input type="text" value={dadosForm.descricao}  onChange={({ target }) => handleChange(target,'descricao')}/>
-        </fieldset>
-        
-
+      <FieldSet texto='imagem' dadosFormulario={!!dadosForm && dadosForm.imagem} onchange={handleChange} nomeDaChave='imagem'/><br/>
+        <FieldSet texto='Nome:' dadosFormulario={!!dadosForm && dadosForm.name} onchange={handleChange} nomeDaChave='name'/><br/>
+        <FieldSet texto='Cor:' dadosFormulario={!!dadosForm && dadosForm.cor} onchange={handleChange} nomeDaChave='cor'/><br/>
+        <FieldSet texto='Marca:' dadosFormulario={!!dadosForm && dadosForm.marca} onchange={handleChange} nomeDaChave='marca'/><br/>
+        <FieldSet texto='Peso:' dadosFormulario={!!dadosForm && dadosForm.peso} onchange={handleChange} nomeDaChave='peso'/><br/>
+        <FieldSet texto='Tamanho:' dadosFormulario={!!dadosForm && dadosForm.tamanho} oonchange={handleChange} nomeDaChave='tamanho'/><br/>
+        <FieldSet texto='Valor:' dadosFormulario={!!dadosForm && dadosForm.valor} onchange={handleChange} nomeDaChave='valor'/><br/>
+        <FieldSet texto='Descrição:' dadosFormulario={!!dadosForm && dadosForm.descricao}  onchange={handleChange} nomeDaChave='descricao'/>
+        < Botao 
+        oncliclk={handleSave} />
       </form>
-      <section>
-        <Botao text="salvar" onclick={handleGetProductsById}/>
-      </section>
-    </div>
+      
+    </>
   )
 }
 

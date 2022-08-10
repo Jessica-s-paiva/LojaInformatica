@@ -62,19 +62,18 @@ const FormLogin = () => {
             <span className= {S.focusInput} data-placeholder='Senha'></span>
           </div>
 
-         
           <div className={S.textCenter}>
             <span className={S.txt1}>Não possui conta?</span>
 
             <Link className={S.txt2}  to='/cadastro'>Cadastrar-se</Link>
           </div>
-
+          
           <div  onClick={(event)=>{
           event.preventDefault()
           handleValidaEmail()
           handleValidaSenha()
           }}>
-            <Link className={S.loginFormBtn}  to={Verificacao > 0 ? '/administracao':''}>Logar</Link>
+            <Link className={S.loginFormBtn}  to={Verificacao > 0 ? '/administrador':''}>Logar</Link>
           </div>
         </form>
       </div>

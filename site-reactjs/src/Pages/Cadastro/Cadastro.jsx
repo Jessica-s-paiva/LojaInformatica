@@ -83,7 +83,7 @@ const Cadastro = () => {
           handleValidaEmail()
           handleValidaSenha()
           }}>
-             <Link className={S.loginFormBtn}  to={Verificacao > 0 ? '/administracao':''}>Logar</Link>
+             <Link className={S.loginFormBtn}  to={Verificacao > 0 ? '/administrador':''}>Logar</Link>
           </div>
 
         </form>

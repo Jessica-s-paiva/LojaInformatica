@@ -1,0 +1,39 @@
+.searchBox{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#353b48;
+    height:40px;
+    border-radius:40px;
+    padding:10px;
+  }
+  .searchBtn{
+    color:#2b3f6d;
+    float:right;
+    width: 40px;
+    border-radius: 50%;
+    background: #6a7dfe;
+    display: flex;
+    justify-items: center;
+    transition: 2s;
+  }
+  .searchTxt{
+    border:none;
+    background:none;
+    outline: none;
+    float:left;
+    padding:0;
+    color:white;
+    font-size:16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width:0px;
+  }
+  .searchBox:hover> .searchTxt{
+    width:240px;
+    padding: 0 6px;
+  }
+  .searchBox:hover> .searchBnt{
+    background: white;
+  }

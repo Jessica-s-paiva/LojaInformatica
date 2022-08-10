@@ -1,11 +1,11 @@
 import React from 'react'
-import S from './Home.module.css'
+import Indicacao from '../../Components/Indicacao/Indicacao'
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Indicacao/>
+    </>
   )
  
 }
