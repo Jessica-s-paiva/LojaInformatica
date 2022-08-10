@@ -1,18 +1,16 @@
 .forms{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
     width: 600px;
     margin: 20px;
-    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
 }
 
 .forms > fieldset{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
 }
 
 .imageForm {
