@@ -47,9 +47,6 @@ const Produtos = () => {
         </section>
         
       </section>
-      <section>
-        {/* <Cards produto={products.name}/> */}
-      </section>
     </>
   )
 }

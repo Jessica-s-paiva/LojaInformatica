@@ -6,20 +6,25 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 2px solid #141e5e;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
 }
 .container > .contentFoto {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
     height: 150px;
-    padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .foto{
     width: 200px;
     height: 150px;
+  }
+
+  .textos{
+    font-size: 13px;
   }

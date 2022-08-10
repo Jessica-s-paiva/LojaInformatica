@@ -9,6 +9,7 @@ const Cards = ({produto}) => {
         </picture>
         <section>
           <h4>{produto.name}</h4>
+          <section className={S.textos}>
           <p>{produto.cor}</p>
           <p>{produto.marca}</p> 
           <p>{produto.peso}</p>
@@ -16,6 +17,7 @@ const Cards = ({produto}) => {
           <p>{produto.valor}</p>
           <p>{produto._id}</p>
 
+          </section>
         </section>
         
         
