@@ -1,10 +1,12 @@
 import React,{ useState, useEffect } from 'react';
 import Cards from '../../Components/Cards/Cards';
 import {getProdutos} from '../../Service/api.js';
-import pc from '../../assets/pc.jpg'
+import pc from '../../assets/pc.jpg';
+import preguica from '../../Images/image-animation.png';
+import preguica1 from '../../assets/preguica.png';
 import { useParams } from 'react-router-dom'
 import S from './Home.module.css';
-
+import Indicacao from '../../Components/Indicacao/Indicacao'
 const Home = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -15,25 +17,27 @@ const Home = () => {
     setProducts(response);
 }
   return (
-    <div>
-      <h1>Loja de Informatica</h1>
-      
-      <section>
+    <>
+      <div className={S.sectionA}>
         <picture>
-          <img src={pc} alt="" />
+          <img className={S.img1} src={preguica} alt="" />
         </picture>
-      </section>
-      
-      <section>
-          {
-            !!products && products.map((product, index)=>{
-            return (<Cards produto={product} key={index}/>)
-            })
-          }
+        <section className={S.titulo}>
+          <h1>InfoStore</h1>
+          <h2>A Loja de Informática do Dev</h2>
+          <picture>
+            <img className={S.img2} src="https://m.media-amazon.com/images/I/61XEbzaBcKL._AC_SL1000_.jpg" alt="" />
+            <img className={S.img2} src="https://m.media-amazon.com/images/I/51GqHrxFv2S._AC_SL1000_.jpg" alt="" />
+            <img className={S.img2} src="https://m.media-amazon.com/images/I/61XEbzaBcKL._AC_SL1000_.jpg" alt="" />
+          </picture>
         </section>
-    </div>
-
-
+        
+        <picture>
+          <img className={S.img} src={preguica1} alt="" />
+        </picture>
+      </div>      
+      <Indicacao/>
+    </>
   )
 }
 
