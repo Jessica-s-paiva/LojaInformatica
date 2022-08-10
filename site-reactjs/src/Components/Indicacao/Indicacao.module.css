@@ -1,6 +1,26 @@
 .BtnIrParaProdutos {
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    background-color: var(--azul);
+    border: 1px solid var(--branco);
+    border-radius: 70px;
     text-decoration: none;
-    padding: 5px;
-    border: 1px solid black;
     text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 16px;
+    box-shadow: 1px 2px var(--azul);
+}
+
+.cards{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.container{
+    display: inline-grid;
+    /* grid-template-columns: auto auto auto; */
 }

@@ -1,23 +1,32 @@
 .container{
-    width: 250px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    border: 1px solid black;
+    width: 300px;
+    height: 450px;
+    display: inline-grid;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: black;
+    background-color: var(--branco);
+    text-align: start;
+    padding-left: 5px;
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;  
+    box-shadow: 1px 3px var(--azul);
 }
 .container > .contentFoto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 200px;
     height: 150px;
-    padding: 10px;
+    padding-left: 30px;
+    margin: 5px;
   }
 
   .foto{
     width: 200px;
-    height: 150px;
+    height: 170px;
+    border-radius: 5px;
+    box-shadow: 1px 2px var(--azul);
+  }
+
+  h5{
+    padding-top: 25px;
+    font-weight: 700;
   }

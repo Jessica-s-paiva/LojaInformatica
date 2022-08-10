@@ -1,0 +1,30 @@
+.container{
+    display: inline-grid;
+    width: 100%;
+    background-color: var(--azul);
+    opacity: 0.8;
+    background-image: url('../../assets/pc.jpg');
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    grid-template-columns: 50% auto;
+}
+
+.titulo > h1{
+    font-size: 120px;
+    padding: 50px 0 0 250px;
+    text-shadow: 2px 3px var(--azul);
+    font-weight: 900;
+}
+
+.img{
+    width: 200px;
+    height: 240px;
+    opacity: 0.8;
+}
+
+.titulo{
+    display: inline-grid;
+    grid-template-columns: auto;
+}

@@ -1,10 +1,11 @@
 import React,{ useState, useEffect } from 'react';
 import Cards from '../../Components/Cards/Cards';
 import {getProdutos} from '../../Service/api.js';
-import pc from '../../assets/pc.jpg'
+import pc from '../../assets/pc.jpg';
+import preguica from '../../Images/image-animation.png';
 import { useParams } from 'react-router-dom'
 import S from './Home.module.css';
-
+import Indicacao from '../../Components/Indicacao/Indicacao'
 const Home = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -15,22 +16,15 @@ const Home = () => {
     setProducts(response);
 }
   return (
-    <div>
-      <h1>Loja de Informatica</h1>
-      
-      <section>
-        <picture>
-          <img src={pc} alt="" />
-        </picture>
-      </section>
-      
-      <section>
-          {
-            !!products && products.map((product, index)=>{
-            return (<Cards produto={product} key={index}/>)
-            })
-          }
-        </section>
+    <div className={S.container}>
+      <section className={S.titulo}>
+        <h1>InfoStore</h1>
+        <h2>A Loja de Informática do Dev</h2>
+      </section> 
+      <picture>
+        <img className={S.img} src={preguica} alt="" />
+      </picture>
+      <Indicacao/>
     </div>
 
 

@@ -7,18 +7,12 @@ const Cards = ({produto}) => {
         <picture className={S.contentFoto}>
             <img src={produto.imagem} className={S.foto} />
         </picture>
-        <section>
-          <h4>{produto.name}</h4>
+          <h5>{produto.name}</h5>
           <p>{produto.cor}</p>
           <p>{produto.marca}</p> 
           <p>{produto.peso}</p>
           <p>{produto.tamanho}</p>
           <p>{produto.valor}</p>
-          <p>{produto._id}</p>
-
-        </section>
-        
-        
     </section>
   )
 }
