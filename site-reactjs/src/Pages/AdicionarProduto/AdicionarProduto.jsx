@@ -24,7 +24,7 @@ const AdicionarProduto = () => {
 
     <div className={S.container}>
       <Form />
-      <Botao text='Alterar' onclick={handleUpdate}/>
+      
     </div>
   )
 }
