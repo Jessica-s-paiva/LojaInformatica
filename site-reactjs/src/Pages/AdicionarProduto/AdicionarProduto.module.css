@@ -1,0 +1,9 @@
+.container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* grid-template-rows: 140px auto; */
+    /* grid-template-areas: "centerLeft centerRight"; */
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}

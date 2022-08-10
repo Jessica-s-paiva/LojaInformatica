@@ -8,6 +8,7 @@ const Item = ({produto}) => {
   const {id} = useParams();
   function handleDelete(){
    deleteProduto(produto._id);
+   alert("Produto excluído com sucesso!")
   }
   return (
     // <section className={S.container}>

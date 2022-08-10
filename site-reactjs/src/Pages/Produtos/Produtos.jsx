@@ -34,19 +34,18 @@ const Produtos = () => {
           <input className={S.texto} type="text" placeholder='Digite o ID do produto'
             value={valorInput}
             onChange={({ target }) => handleSetInput(target)}/>
-          <button className={S.button} onClick={handleGetProductsById}>Buscar</button>
-        </section>
+          <button className={S.btn} onClick={handleGetProductsById}>Buscar</button>
+    </section>
 
       <section className={S.sectionCards}>
-        <section className={S.sectionA}>
           {
             !!products && products.map((product, index)=>{
             return (<Cards produto={product} key={index}/>)
             })
           }
-        </section>
-        
       </section>
+        
+
     </>
   )
 }

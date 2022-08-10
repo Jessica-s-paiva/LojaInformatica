@@ -53,7 +53,6 @@ function handleChange(target, nomeDaChave){
           }
         </section> */}
         <section>
-          <h3>ID: {id}</h3>
           <AddProduto dadosForm={dadosForm} handleChange={handleChange}/>
           <Botao text='Alterar' onclick={handleUpdate}/>
         </section>
