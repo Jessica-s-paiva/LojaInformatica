@@ -32,7 +32,7 @@ const Administrador = () => {
 
   return (
     <section className={S.container}>
-        <h2>Administrador</h2>
+        <h2>Área do Administrador</h2>
         <section className={S.sectionB}>
           <input type="text" placeholder='Digite o ID do produto'
             value={valorInput}

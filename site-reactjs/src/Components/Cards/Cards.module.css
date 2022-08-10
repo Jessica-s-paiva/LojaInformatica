@@ -1,3 +1,4 @@
+
 .container{
     width: 250px;
     height: 350px;
@@ -18,13 +19,4 @@
     width: 200px;
     height: 150px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
 
-  .foto{
-    width: 200px;
-    height: 150px;
-  }
-
-  .textos{
-    font-size: 13px;
-  }
