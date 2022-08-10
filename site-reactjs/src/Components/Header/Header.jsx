@@ -1,14 +1,13 @@
 import React, { StrictMode } from 'react';
 import S from './Header.module.css';
 import { Link } from 'react-router-dom';
-import preguica from '../../assets/preguica.png';
+import zebra from '../../Images/zebra.jpg';
 const Header = ({titulo}) => {
   return (
     <header className={S.container}>
       <picture>
-        <img className={S.img} src={preguica} alt="" />
+        <img className={S.img} src={zebra} alt="" />
       </picture>
-        <h4>{titulo}</h4>
         <nav>
           <Link className={S.link} to='/'>Home</Link>
           <Link className={S.link} to='/produtos'>Produtos</Link>

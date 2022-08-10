@@ -1,7 +1,8 @@
 .BtnIrParaProdutos {
     width: 250px;
     height: 40px;
-    margin: 10px;
+    margin: auto;
+    margin-bottom: 20px;
     background-color: var(--azul);
     border: 1px solid var(--branco);
     border-radius: 70px;
@@ -11,6 +12,7 @@
     font-family: 'Montserrat', sans-serif;  
     font-size: 16px;
     box-shadow: 1px 2px var(--azul);
+    padding: 10px;
 }
 
 .cards{
@@ -23,4 +25,23 @@
 .container{
     display: inline-grid;
     /* grid-template-columns: auto auto auto; */
+    width: 100%;
+    background-color: var(--azul);
+    opacity: 0.8;
+    background-image: url('../../Images/25331.jpg');
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secundaria);
+}
+
+.container > h2{
+    padding-top: 80px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 900;
+    text-shadow: 2px 2px var(--azulClaro);
+    color: var(--secundaria);
+
 }

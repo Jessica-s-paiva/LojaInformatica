@@ -33,6 +33,7 @@ const Indicacao = () => {
           {
               !!indicacoes && indicacoes.map((indicacao, index)=>{
               return (<Cards produto={indicacao} key={index}/>)
+              
               })
           }
         </section>

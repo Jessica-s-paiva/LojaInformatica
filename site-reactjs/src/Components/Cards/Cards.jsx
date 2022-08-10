@@ -13,6 +13,7 @@ const Cards = ({produto}) => {
           <p>{produto.peso}</p>
           <p>{produto.tamanho}</p>
           <p>{produto.valor}</p>
+          <button className={S.btn}>Comprar</button>
     </section>
   )
 }
