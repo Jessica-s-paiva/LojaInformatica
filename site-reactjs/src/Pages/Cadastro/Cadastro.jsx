@@ -6,6 +6,7 @@ import logo from '../../assets/preguica.png'
 
 const Cadastro = () => {
 
+
   const [Nome, setNome]= useState('')
   const [Email, setEmail] = useState('')
   const [Senha, setSenha]= useState('123')
@@ -15,12 +16,8 @@ const Cadastro = () => {
     setNome(target.value)
   }
 
-  function handleInputEmail(target){
-    setEmail(target.value)
-  }
-  
-  function handleInputSenha(target){
-    setSenha(target.value)
+  function handleInputEmail(target) {
+    setEmail(target.value);
   }
 
   function handleValidaNome(){
@@ -50,7 +47,6 @@ const Cadastro = () => {
       }
   }
 
-  
   return (
     <div className={S.container}>
     <div className={S.containerLogin}>
@@ -89,10 +85,10 @@ const Cadastro = () => {
         </form>
       </div>
     </div>
-    </div>
+  </div>
 
-
-  )
+        )
 }
 
-export default Cadastro
+
+export default Cadastro;

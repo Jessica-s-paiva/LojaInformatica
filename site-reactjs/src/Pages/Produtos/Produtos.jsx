@@ -30,6 +30,13 @@ const Produtos = () => {
 
   return (
     <>
+    <section className={S.sectionB}>
+          <input className={S.texto} type="text" placeholder='Digite o ID do produto'
+            value={valorInput}
+            onChange={({ target }) => handleSetInput(target)}/>
+          <button className={S.button} onClick={handleGetProductsById}>Buscar</button>
+        </section>
+
       <section className={S.sectionCards}>
         <section className={S.sectionA}>
           {
@@ -38,16 +45,7 @@ const Produtos = () => {
             })
           }
         </section>
-        <section className={S.sectionB}>
-          <input type="text" placeholder='Digite o ID do produto'
-            value={valorInput}
-            onChange={({ target }) => handleSetInput(target)}/>
-          <button onClick={handleGetProductsById}>Buscar produto por ID</button>
-        </section>
         
-      </section>
-      <section>
-        {/* <Cards produto={products.name}/> */}
       </section>
     </>
   )
