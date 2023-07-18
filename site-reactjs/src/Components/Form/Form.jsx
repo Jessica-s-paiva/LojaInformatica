@@ -36,14 +36,14 @@ const Form = () => {
         </picture>
       </section>
       <form className={S.forms} action="">
-        <FieldSet texto='Imagem do produto:' dadosFormulario={dadosForm.imagem} onchange={({ target }) => handleChange(target,'imagem')}/>
-        <FieldSet texto='Nome:' dadosFormulario={dadosForm.name} onchange={({ target }) => handleChange(target,'name')}/>
-        <FieldSet texto='Cor:' dadosFormulario={dadosForm.cor} onchange={({ target }) => handleChange(target,'cor')}/>
-        <FieldSet texto='Marca:' dadosFormulario={dadosForm.marca} onchange={({ target }) => handleChange(target,'marca')}/>
-        <FieldSet texto='Peso:' dadosFormulario={dadosForm.peso} onchange={({ target }) => handleChange(target,'peso')}/>
-        <FieldSet texto='Tamanho:' dadosFormulario={dadosForm.tamanho} onchange={({ target }) => handleChange(target,'tamanho')}/>
-        <FieldSet texto='Valor:' dadosFormulario={dadosForm.valor} onchange={({ target }) => handleChange(target,'valor')}/>
-        <FieldSet texto='Descrição:' dadosFormulario={dadosForm.descricao}  onchange={({ target }) => handleChange(target,'descricao')}/>
+      <FieldSet texto='imagem' dadosFormulario={!!dadosForm && dadosForm.imagem} onchange={handleChange} nomeDaChave='imagem'/>
+        <FieldSet texto='Nome:' dadosFormulario={!!dadosForm && dadosForm.name} onchange={handleChange} nomeDaChave='name'/>
+        <FieldSet texto='Cor:' dadosFormulario={!!dadosForm && dadosForm.cor} onchange={handleChange} nomeDaChave='cor'/>
+        <FieldSet texto='Marca:' dadosFormulario={!!dadosForm && dadosForm.marca} onchange={handleChange} nomeDaChave='marca'/>
+        <FieldSet texto='Peso:' dadosFormulario={!!dadosForm && dadosForm.peso} onchange={handleChange} nomeDaChave='peso'/>
+        <FieldSet texto='Tamanho:' dadosFormulario={!!dadosForm && dadosForm.tamanho} onchange={handleChange} nomeDaChave='tamanho'/>
+        <FieldSet texto='Valor:' dadosFormulario={!!dadosForm && dadosForm.valor} onchange={handleChange} nomeDaChave='valor'/>
+        <FieldSet texto='Descrição:' dadosFormulario={!!dadosForm && dadosForm.descricao}  onchange={handleChange} nomeDaChave='descricao'/>
         <Botao text='Salvar' onclick={handleSave}/>
       </form>
       
